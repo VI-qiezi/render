@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <style>
+    h1{
+        text-align: center;
+    }
+    table{
+        width: 500px;
+        height: 100px;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
+    th,td{
+        border: 1px solid black;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>产品列表</h1>
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>产品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+        </tr>
+        <% for(var i=0;i<products.length;i++){ %>
+            <tr>
+                <td><%=products[i].id%></td>
+                <td><%=products[i].name%></td>
+                <td><%=products[i].price%></td>
+                <td><%=products[i].number%></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
